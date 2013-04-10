@@ -5,7 +5,10 @@ from urllib import urlencode
 from social_auth.backends import BaseOAuth2, OAuthBackend
 from social_auth.utils import dsa_urlopen
 from social_auth.exceptions import AuthTokenError
-import json
+try:
+    import json
+except ImportError: # python < 2.6
+    from django.utils import simplejson as json
 
 class RedditBackend(OAuthBackend):
     """Reddit OAuth2 authentication backend"""

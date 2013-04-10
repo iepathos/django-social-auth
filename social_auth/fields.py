@@ -1,7 +1,10 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.encoding import smart_unicode
-import json
+try:
+    import json
+except ImportError: # python < 2.6
+    from django.utils import simplejson as json
 
 class JSONField(models.TextField):
     """Simple JSON field that stores python structures as JSON strings

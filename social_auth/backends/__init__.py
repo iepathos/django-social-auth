@@ -34,6 +34,10 @@ from social_auth.exceptions import StopPipeline, AuthException, AuthFailed, \
                                    NotAllowedToDisconnect
 from social_auth.backends.utils import build_consumer_oauth_request
 
+try:
+    import json
+except ImportError: # python < 2.6
+    from django.utils import simplejson as json
 
 # OpenID configuration
 OLD_AX_ATTRS = [

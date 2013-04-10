@@ -13,7 +13,10 @@ class for details on how to extend it.
 """
 from social_auth.backends import ConsumerBasedOAuth, OAuthBackend
 from social_auth.exceptions import AuthCanceled
-import json
+try:
+    import json
+except ImportError: # python < 2.6
+    from django.utils import simplejson as json
 
 # Twitter configuration
 TWITTER_SERVER = 'api.twitter.com'

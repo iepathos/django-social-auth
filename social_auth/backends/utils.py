@@ -3,7 +3,10 @@ from oauth2 import Consumer as OAuthConsumer, Token, Request as OAuthRequest, \
 
 from social_auth.models import UserSocialAuth
 from social_auth.utils import dsa_urlopen
-
+try:
+    import json
+except ImportError: # python < 2.6
+    from django.utils import simplejson as json
 
 def consumer_oauth_url_request(backend, url, user_or_id, redirect_uri='/',
                                json=True):

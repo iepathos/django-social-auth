@@ -2,13 +2,16 @@
 BrowserID support
 """
 from urllib import urlencode
-import json
 from django.contrib.auth import authenticate
 
 from social_auth.backends import SocialAuthBackend, BaseAuth
 from social_auth.utils import log, dsa_urlopen
 from social_auth.exceptions import AuthFailed, AuthMissingParameter
 
+try:
+    import json
+except ImportError: # python < 2.6
+    from django.utils import simplejson as json
 
 # BrowserID verification server
 BROWSER_ID_SERVER = 'https://verifier.login.persona.org/verify'
