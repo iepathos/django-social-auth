@@ -4,7 +4,7 @@ BrowserID support
 from urllib import urlencode
 
 from django.contrib.auth import authenticate
-from django.utils import simplejson
+from django.utils import json
 
 from social_auth.backends import SocialAuthBackend, BaseAuth
 from social_auth.utils import log, dsa_urlopen
