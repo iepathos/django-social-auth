@@ -18,7 +18,7 @@ from urllib2 import Request
 
 from oauth2 import Request as OAuthRequest
 
-from django.utils import simplejson
+from django.utils import json
 
 from social_auth.utils import setting, dsa_urlopen
 from social_auth.backends import OpenIdAuth, ConsumerBasedOAuth, BaseOAuth2, \
