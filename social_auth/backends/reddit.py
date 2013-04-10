@@ -2,7 +2,7 @@ import base64
 from urllib2 import Request, HTTPError
 from urllib import urlencode
 
-from django.utils import simplejson
+from django.utils import json
 
 from social_auth.backends import BaseOAuth2, OAuthBackend
 from social_auth.utils import dsa_urlopen
