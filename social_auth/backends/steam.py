@@ -3,7 +3,7 @@ import re
 import urllib
 import urllib2
 
-from django.utils import simplejson
+from django.utils import json
 
 from social_auth.backends import OpenIdAuth, OpenIDBackend
 from social_auth.exceptions import AuthFailed
