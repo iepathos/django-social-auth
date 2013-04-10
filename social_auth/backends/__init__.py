@@ -19,7 +19,7 @@ from openid.extensions import sreg, ax, pape
 from oauth2 import Consumer as OAuthConsumer, Token, Request as OAuthRequest
 
 from django.contrib.auth import authenticate
-from django.utils import simplejson
+from django.utils import json
 from django.utils.importlib import import_module
 
 from social_auth.models import UserSocialAuth
