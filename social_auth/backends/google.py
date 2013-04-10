@@ -15,7 +15,7 @@ OpenID also works straightforward, it doesn't need further configurations.
 """
 from urllib import urlencode
 from urllib2 import Request
-
+import json
 from oauth2 import Request as OAuthRequest
 
 from social_auth.utils import setting, dsa_urlopen

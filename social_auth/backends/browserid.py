@@ -2,7 +2,7 @@
 BrowserID support
 """
 from urllib import urlencode
-
+import json
 from django.contrib.auth import authenticate
 
 from social_auth.backends import SocialAuthBackend, BaseAuth

@@ -6,7 +6,7 @@ import urllib2
 from social_auth.backends import OpenIdAuth, OpenIDBackend
 from social_auth.exceptions import AuthFailed
 from social_auth.utils import setting
-
+import json
 
 STEAM_ID = re.compile('steamcommunity.com/openid/id/(.*?)$')
 USER_INFO = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?'

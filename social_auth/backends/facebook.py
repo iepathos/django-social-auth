@@ -18,7 +18,7 @@ import hashlib
 import time
 from urllib import urlencode
 from urllib2 import HTTPError
-
+import json
 from django.contrib.auth import authenticate
 from django.http import HttpResponse
 from django.template import TemplateDoesNotExist, RequestContext, loader

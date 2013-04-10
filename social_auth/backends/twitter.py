@@ -13,7 +13,7 @@ class for details on how to extend it.
 """
 from social_auth.backends import ConsumerBasedOAuth, OAuthBackend
 from social_auth.exceptions import AuthCanceled
-
+import json
 
 # Twitter configuration
 TWITTER_SERVER = 'api.twitter.com'
